@@ -1,0 +1,62 @@
+{
+    "periods": [
+        {
+            "year": {
+              "January": null,
+              "February": null,
+              "March": null,
+              "April": null,
+              "May": null,
+              "June": null,
+              "July": null,
+              "August": null,
+              "September": null,
+              "October": null,
+              "November": null,
+              "December": null
+            },
+            "half_year": {
+              "January": null,
+              "February": null,
+              "March": null,
+              "April": null,
+              "May": null,
+              "June": null
+            },
+            "month": {
+              "1": 500,
+              "2": 1500,
+              "3": 0,
+              "4": 2000,
+              "5": 5000,
+              "6": 10000,
+              "7": 0,
+              "8": 1500,
+              "9": 5000,
+              "10": 500,
+              "11": 10000,
+              "12": 1000,
+              "13": 0,
+              "14": 500,
+              "15": 1750,
+              "16": 1000,
+              "17": 1380,
+              "18": 556,
+              "19": 132,
+              "20": 7893,
+              "21": 8222,
+              "22": 1322,
+              "23": 236,
+              "24": 3650,
+              "25": 4752,
+              "26": 3112,
+              "27": 5341,
+              "28": 123,
+              "29": 954,
+              "30": 1231,
+              "31": 843
+            }
+          }
+        
+      ]
+}

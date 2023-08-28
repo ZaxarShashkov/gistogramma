@@ -1,0 +1,37 @@
+.container {
+	display: grid;
+	grid-template-rows: auto 70px;
+	gap: 17px;
+}
+
+.column {
+	display: grid;
+	grid-template-columns: repeat(31, 1fr);
+	align-items: flex-end;
+	gap: 11px;
+	&__default {
+		position: relative;
+		height: 1px;
+		background-color: pink;
+		transition: all 1s ease;
+		&:hover::after {
+			content: attr(data-title); /* Выводим текст */
+			position: absolute; /* Абсолютное позиционирование */
+			left: 20%;
+			top: 30%; /* Положение подсказки */
+			z-index: 1; /* Отображаем подсказку поверх других элементов */
+			background: rgba(255, 255, 230, 0.9); /* Полупрозрачный цвет фона */
+			font-family: Arial, sans-serif; /* Гарнитура шрифта */
+			font-size: 11px; /* Размер текста подсказки */
+			padding: 5px 10px; /* Поля */
+			border: 1px solid #333; /* Параметры рамки */
+		}
+	}
+}
+
+.numbers {
+	display: flex;
+	align-items: flex-end;
+	margin-bottom: 40px;
+	gap: 111px;
+}
