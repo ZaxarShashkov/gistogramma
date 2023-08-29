@@ -2,26 +2,26 @@
     "periods": [
         {
             "year": {
-              "January": null,
-              "February": null,
-              "March": null,
-              "April": null,
-              "May": null,
-              "June": null,
-              "July": null,
-              "August": null,
-              "September": null,
-              "October": null,
-              "November": null,
-              "December": null
+              "January": 5100,
+              "February": 1231,
+              "March": 8532,
+              "April": 2143,
+              "May": 575,
+              "June": 3975,
+              "July": 4500,
+              "August": 5893,
+              "September": 6723,
+              "October": 7512,
+              "November": 9765,
+              "December": 10000
             },
             "half_year": {
-              "January": null,
-              "February": null,
-              "March": null,
-              "April": null,
-              "May": null,
-              "June": null
+              "January": 5100,
+              "February": 560,
+              "March": 1350,
+              "April": 7830,
+              "May": 570,
+              "June": 3400
             },
             "month": {
               "1": 500,

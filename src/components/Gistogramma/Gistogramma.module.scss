@@ -1,0 +1,57 @@
+.container {
+	display: grid;
+	grid-template-rows: auto 70px;
+	margin-right: 40px;
+}
+
+.column {
+	display: grid;
+	align-items: flex-end;
+	transition: height 1s ease;
+	&__default {
+		position: relative;
+		height: 1px;
+		background-color: pink;
+		transition: height 1s ease;
+		&:hover::after {
+			content: attr(data-title);
+			position: absolute;
+			left: 20%;
+			top: 30%;
+			z-index: 1;
+			background: rgba(255, 255, 230, 0.9);
+			font-size: 11px;
+			padding: 5px 10px;
+			border: 1px solid #333;
+		}
+	}
+	&__halfYear {
+		grid-template-columns: repeat(6, 1fr);
+		gap: 145px;
+		justify-content: space-between;
+	}
+	&__lastYear {
+		grid-template-columns: repeat(12, 1fr);
+		gap: 55px;
+		justify-content: space-between;
+	}
+	&__lastMonth {
+		grid-template-columns: repeat(31, 1fr);
+		gap: 17px;
+	}
+}
+
+.numbers {
+	display: flex;
+	align-items: flex-end;
+	margin-bottom: 40px;
+	&__lastYear {
+		gap: 29px;
+	}
+	&__halfYear {
+		gap: 111px;
+	}
+	&__lastMonth {
+		gap: 111px;
+	}
+}

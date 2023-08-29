@@ -10,11 +10,11 @@ import styles from './Select.module.scss';
 import cn from 'classnames';
 
 interface SelectProps {
-	value: string | undefined;
-	setValue: (e: string | undefined) => void;
+	period: string | undefined;
+	setPeriod: (e: string | undefined) => void;
 }
 
-const Select = ({ value, setValue }: SelectProps): JSX.Element => {
+const Select = ({ period, setPeriod }: SelectProps): JSX.Element => {
 	const [isVisible, setIsVisible] = useState<boolean>(false);
 
 	const onVisible = () => {
@@ -22,7 +22,7 @@ const Select = ({ value, setValue }: SelectProps): JSX.Element => {
 	};
 
 	const handleClick = (e: MouseEvent<HTMLDivElement>) => {
-		setValue(e.currentTarget.dataset.name);
+		setPeriod(e.currentTarget.dataset.name);
 		setIsVisible(false);
 	};
 
@@ -46,7 +46,7 @@ const Select = ({ value, setValue }: SelectProps): JSX.Element => {
 				<div className={styles.select__container}>
 					<div className={styles.select__select} onClick={onVisible}>
 						<div className={styles.select__date}>
-							<span>{value}</span>
+							<span>{period}</span>
 						</div>
 						<div
 							className={cn({
@@ -77,7 +77,7 @@ const Select = ({ value, setValue }: SelectProps): JSX.Element => {
 								data-name='За последние 6 месяцев'
 								onClick={(e) => handleClick(e)}>
 								<div className={styles.select__date}>За последние 6 месяцев</div>
-								{value === 'За последние 6 месяцев' ? (
+								{period === 'За последние 6 месяцев' ? (
 									<svg
 										width='18'
 										height='18'
@@ -100,7 +100,7 @@ const Select = ({ value, setValue }: SelectProps): JSX.Element => {
 								onClick={(e) => handleClick(e)}
 								data-name='За последний год'>
 								<div className={styles.select__date}>За последний год</div>
-								{value === 'За последний год' ? (
+								{period === 'За последний год' ? (
 									<svg
 										width='18'
 										height='18'
@@ -123,7 +123,7 @@ const Select = ({ value, setValue }: SelectProps): JSX.Element => {
 								onClick={(e) => handleClick(e)}
 								data-name='За последний месяц'>
 								<div className={styles.select__date}>За последний месяц</div>
-								{value === 'За последний месяц' ? (
+								{period === 'За последний месяц' ? (
 									<svg
 										width='18'
 										height='18'
