@@ -15,7 +15,7 @@ type Props = {
 const Gistogramma = ({ period, setPeriod }: Props) => {
 	const { data, isLoading, error } = dataApi.useFetchAllDataQuery(100, {});
 
-	console.log(period);
+	console.log(data);
 
 	return (
 		<>
