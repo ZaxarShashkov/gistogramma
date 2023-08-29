@@ -25,7 +25,7 @@
 		}
 	}
 	&__halfYear {
-		grid-template-columns: repeat(6, 1fr);
+		grid-template-columns: repeat(6, 20px);
 		gap: 135px;
 		transition: height 1s ease;
 	}
