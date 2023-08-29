@@ -124,27 +124,27 @@ const Gistogramma = ({ period, setPeriod }: Props) => {
 						</>
 					) : period === 'За последний год' ? (
 						<>
-							<Count count={'Янв'} key={'05'} />
-							<Count count={'Фев'} key={10} />
-							<Count count={'Март'} key={15} />
-							<Count count={'Апр'} key={20} />
-							<Count count={'Май'} key={25} />
-							<Count count={'Июнь'} key={30} />
-							<Count count={'Июль'} key={30} />
-							<Count count={'Авг'} key={30} />
-							<Count count={'Сент'} key={30} />
-							<Count count={'Окт'} key={30} />
-							<Count count={'Нояб'} key={30} />
-							<Count count={'Дек'} key={30} />
+							<Count count={'Янв'} key={'Янв'} />
+							<Count count={'Фев'} key={'Фев'} />
+							<Count count={'Март'} key={'Март'} />
+							<Count count={'Апр'} key={'Апр'} />
+							<Count count={'Май'} key={'Май'} />
+							<Count count={'Июнь'} key={'Июнь'} />
+							<Count count={'Июль'} key={'Июль'} />
+							<Count count={'Авг'} key={'Авг'} />
+							<Count count={'Сент'} key={'Сент'} />
+							<Count count={'Окт'} key={'Окт'} />
+							<Count count={'Нояб'} key={'Нояб'} />
+							<Count count={'Дек'} key={'Дек'} />
 						</>
 					) : period === 'За последние 6 месяцев' ? (
 						<>
-							<Count count={'Янв'} key={'05'} />
-							<Count count={'Фев'} key={10} />
-							<Count count={'Март'} key={15} />
-							<Count count={'Апр'} key={20} />
-							<Count count={'Май'} key={25} />
-							<Count count={'Июнь'} key={30} />
+							<Count count={'Янв'} key={'Jan'} />
+							<Count count={'Фев'} key={'Feb'} />
+							<Count count={'Март'} key={'March'} />
+							<Count count={'Апр'} key={'April'} />
+							<Count count={'Май'} key={'May'} />
+							<Count count={'Июнь'} key={'June'} />
 						</>
 					) : null}
 				</div>
