@@ -4,23 +4,23 @@ import style from './Gistogramma.module.scss';
 import cn from 'classnames';
 import Count from '../UI/Count/Count';
 import { dataApi } from '@/Services/Api';
-import { Month, Period } from '@/interfaces/data.interface';
+import { Period } from '@/interfaces/data.interface';
 import Spinner from '../UI/Spinner/Spinner';
+import { v4 as uuidv4 } from 'uuid';
 
-type Props = {
+type GistogrammaProps = {
 	period: string | undefined;
 	setPeriod: (e: string | undefined) => void;
 };
 
-const Gistogramma = ({ period, setPeriod }: Props) => {
+const Gistogramma = ({ period, setPeriod }: GistogrammaProps): JSX.Element => {
 	const { data, isLoading, error } = dataApi.useFetchAllDataQuery(100, {});
-
-	console.log(data);
 
 	return (
 		<>
 			<div className={style.container}>
-				{/* {isLoading && <Spinner />} */}
+				{isLoading && <Spinner />}
+
 				<div
 					className={cn(style.column, {
 						[style.column__lastMonth]: period === 'За последний месяц',
@@ -33,7 +33,7 @@ const Gistogramma = ({ period, setPeriod }: Props) => {
 								(month: number, i: number): ReactNode => {
 									return (
 										<div
-											key={month + i}
+											key={uuidv4()}
 											className={style.column__default}
 											data-title={month}
 											style={
@@ -59,7 +59,7 @@ const Gistogramma = ({ period, setPeriod }: Props) => {
 								(month: number, i: number): ReactNode => {
 									return (
 										<div
-											key={month + i}
+											key={uuidv4()}
 											className={style.column__default}
 											data-title={month}
 											style={
@@ -85,7 +85,7 @@ const Gistogramma = ({ period, setPeriod }: Props) => {
 								(month: number, i: number): ReactNode => {
 									return (
 										<div
-											key={month + i}
+											key={uuidv4()}
 											className={style.column__default}
 											data-title={month}
 											style={
